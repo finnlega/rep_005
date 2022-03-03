@@ -1,4 +1,4 @@
-
+'use strict';
 
 // let numbers = [1, 4, 5, 2, 9, 5, 1];
 // let UnicumNumbers = [];
@@ -46,3 +46,24 @@ const category = 'toys';
 console.log(`https://someurl.com/${category}/5`);
 const newObj = {};
 console.log(newObj);
+const num  = 87;
+// const show = false;
+// (num === 50 && show ) ? console.log('ок') : console.log('error');
+
+switch (num) {
+    case 49:
+    console.log("неверно");
+    break;
+
+    case 100:
+    console.log("неверно");
+    break;
+
+    case 50:
+    console.log("верно");
+    break;
+
+    default:
+    console.log("в другой раз");
+    break;
+}
