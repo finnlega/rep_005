@@ -1,4 +1,4 @@
-"use strict";
+
 
 // let numbers = [1, 4, 5, 2, 9, 5, 1];
 // let UnicumNumbers = [];
