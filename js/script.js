@@ -97,13 +97,72 @@ let personalMovieDB = {
     privat: false
 };
 
-let filmFirst = prompt("Один из последних просмотренных фильмов?", "");
-let gradeOne = prompt("На сколько оцените его?", "");
-let filmSecond = prompt("Один из последних просмотренных фильмов?", "");
-let gradeTwo = prompt("На сколько оцените его?", "");
 
-personalMovieDB.movies[filmFirst] = gradeOne;
-personalMovieDB.movies[filmSecond] = gradeTwo;
+// let filmSecond = prompt("Один из последних просмотренных фильмов?", "");
+// let gradeTwo = prompt("На сколько оцените его?", "");
+// let count = 1;
+// while (count < 3) {
+//     personalMovieDB.movies[filmFirst] = gradeOne;
+//     count++;
+// }
+
+// 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+// отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+// возвращаем пользователя к вопросам опять
+let filmFirst;
+let gradeOne;
+
+for (let i = 1; i < 3; i++) {
+       
+        console.log(i);
+        filmFirst = prompt("Один из последних просмотренных фильмов?", "");
+        gradeOne = prompt("На сколько оцените его?", "");
+        if (filmFirst.length > 10) {
+            console.log("Слишком длинное название фильма");
+            i--;
+        }
+        else { personalMovieDB.movies[filmFirst] = gradeOne; }
+    
+    
+    console.log(i);
+
+    
+}
+
+// personalMovieDB.movies[filmFirst] = gradeOne;
+// personalMovieDB.movies[filmSecond] = gradeTwo;
 
 console.log(personalMovieDB);
 
+// let num = 50;
+
+// while (num < 1020) {
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+
+// while (num <= 55);
+
+// for (let i = 1; i < 10; i++ ) {
+//     if (i === 7) {
+//         continue;
+
+//     }
+//     console.log(i);
+
+// }1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
+
+// 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+// отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+// возвращаем пользователя к вопросам опять
+
+// 3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+// "Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+// "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
+
+// 4) Потренироваться и переписать цикл еще двумя способами*/
