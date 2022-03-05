@@ -132,5 +132,13 @@ for (let i = 1; i < 3; i++) {
             console.log("Ошибка");
             i--;
         }   
-    }
+}
 
+    // 016 Функции
+
+function getName ( text ) {
+    console.log(text);
+
+}
+
+getName("Иван");
