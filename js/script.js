@@ -87,6 +87,9 @@
 //         'logan': '8.1'
 //     
 
+// 3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+// "Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+// "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
 let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 let personalMovieDB = {
@@ -97,72 +100,37 @@ let personalMovieDB = {
     privat: false
 };
 
-
-// let filmSecond = prompt("Один из последних просмотренных фильмов?", "");
-// let gradeTwo = prompt("На сколько оцените его?", "");
-// let count = 1;
-// while (count < 3) {
-//     personalMovieDB.movies[filmFirst] = gradeOne;
-//     count++;
-// }
-
+if (personalMovieDB.count <= 10) {
+    console.log("Просмотрено довольно мало фильмов");
+} else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
+    console.log("Вы классический зритель");
+} else if (personalMovieDB.count > 30) {
+    console.log("Вы киноман");
+    }
+  else {
+    console.log("Произошла ошибка");  
+  
+}
 // 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
 // отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
 // возвращаем пользователя к вопросам опять
-let filmFirst;
-let gradeOne;
+
+let lastFilm;
+let grade;
 
 for (let i = 1; i < 3; i++) {
        
         console.log(i);
-        filmFirst = prompt("Один из последних просмотренных фильмов?", "");
-        gradeOne = prompt("На сколько оцените его?", "");
-        if (filmFirst.length > 10) {
-            console.log("Слишком длинное название фильма");
-            i--;
+        lastFilm = prompt("Один из последних просмотренных фильмов?", "");
+        grade = prompt("На сколько оцените его?", "");
+        if (lastFilm != null && grade != null && lastFilm != '' && grade != '' && lastFilm.length < 50) {
+            console.log("выполнено");
+            personalMovieDB.movies[lastFilm] = grade; 
+                        
         }
-        else { personalMovieDB.movies[filmFirst] = gradeOne; }
-    
-    
-    console.log(i);
+        else { 
+            console.log("Ошибка");
+            i--;
+        }   
+    }
 
-    
-}
-
-// personalMovieDB.movies[filmFirst] = gradeOne;
-// personalMovieDB.movies[filmSecond] = gradeTwo;
-
-console.log(personalMovieDB);
-
-// let num = 50;
-
-// while (num < 1020) {
-//     console.log(num);
-//     num++;
-// }
-
-// do {
-//     console.log(num);
-//     num++;
-// }
-
-// while (num <= 55);
-
-// for (let i = 1; i < 10; i++ ) {
-//     if (i === 7) {
-//         continue;
-
-//     }
-//     console.log(i);
-
-// }1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
-
-// 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
-// отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
-// возвращаем пользователя к вопросам опять
-
-// 3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
-// "Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
-// "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
-
-// 4) Потренироваться и переписать цикл еще двумя способами*/
