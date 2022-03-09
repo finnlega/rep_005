@@ -90,85 +90,121 @@
 // 3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
 // "Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
 // "Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
-let numberOfFilms;
+// let numberOfFilms;
 
-function start() {
-    numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+// function start() {
+//     numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
-    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
-    }
-}
+//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+//     }
+// }
 
-start();
+// start();
 
-let personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// let personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
-function getLevel () {
-    if (personalMovieDB.count <= 10) {
-        console.log("Просмотрено довольно мало фильмов");
-    } else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
-        console.log("Вы классический зритель");
-    } else if (personalMovieDB.count > 30) {
-        console.log("Вы киноман");
-        }
-      else {
-        console.log("Произошла ошибка");  
+// function getLevel () {
+//     if (personalMovieDB.count <= 10) {
+//         console.log("Просмотрено довольно мало фильмов");
+//     } else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
+//         console.log("Вы классический зритель");
+//     } else if (personalMovieDB.count > 30) {
+//         console.log("Вы киноман");
+//         }
+//       else {
+//         console.log("Произошла ошибка");  
       
-    }
-} 
+//     }
+// } 
 
-getLevel();
+// getLevel();
 
 
-function rememberMyFilms () {
-    let lastFilm;
-    let grade;
+// function rememberMyFilms () {
+//     let lastFilm;
+//     let grade;
 
-for (let i = 1; i < 3; i++) {
+// for (let i = 1; i < 3; i++) {
        
-        console.log(i);
-        lastFilm = prompt("Один из последних просмотренных фильмов?", "");
-        grade = prompt("На сколько оцените его?", "");
-        if (lastFilm != null && grade != null && lastFilm != '' && grade != '' && lastFilm.length < 50) {
-            console.log("выполнено");
-            personalMovieDB.movies[lastFilm] = grade; 
+//         console.log(i);
+//         lastFilm = prompt("Один из последних просмотренных фильмов?", "");
+//         grade = prompt("На сколько оцените его?", "");
+//         if (lastFilm != null && grade != null && lastFilm != '' && grade != '' && lastFilm.length < 50) {
+//             console.log("выполнено");
+//             personalMovieDB.movies[lastFilm] = grade; 
                         
-        }
-        else { 
-            console.log("Ошибка");
-            i--;
-        }   
-}
-}
+//         }
+//         else { 
+//             console.log("Ошибка");
+//             i--;
+//         }   
+// }
+// }
 
-rememberMyFilms();
+// rememberMyFilms();
 
 
-function showMyDB() {
-    if (personalMovieDB.privat === false) {
-        console.log(personalMovieDB);
-    }
+// function showMyDB() {
+//     if (personalMovieDB.privat === false) {
+//         console.log(personalMovieDB);
+//     }
 
-}
+// }
 
-showMyDB();
+// showMyDB();
 
-function writeYourGenres() {
-    for (let j = 0; j < 3; j++ ) {
-        personalMovieDB.genres[j] = prompt(`Ваш любимый жанр под номером ${j+1}`);
-    }
+// function writeYourGenres() {
+//     for (let j = 0; j < 3; j++ ) {
+//         personalMovieDB.genres[j] = prompt(`Ваш любимый жанр под номером ${j+1}`);
+//     }
     
-}
+// }
 
-writeYourGenres();
+// writeYourGenres();
 
+// let options = {
+//     name: 'vlad',
+//     width: 1024,
+//     height: 860,
+//     colors: {
+//         bg: 'red',
+//         color: 'yellow'
+//     }
+// };
+
+    // console.log(Object.keys(options).length);
+
+    // // 021 Массивы и псевдомассивы
+
+    const arr = [1, 2, 16, 7, 6, 13, 4, 56];
+
+    arr.sort(compareNum);
+
+    function compareNum (a, b) {
+        return a-b;
+    }
+    console.log(arr);
+    // // arr.pop();
+    // // console.log(arr);
+    // // arr.push(11);
+    // // console.log(arr);
+
+    // arr.forEach (function (item, i, arr) {
+    //     console.log(`${i}: ${item} внутри ${arr}`);
+    // });
+
+    // const str =  prompt ("", "");
+    // const products = str.split(", ");
+    // console.log(products.sort());
+
+ 
 // 2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
 // отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
 // возвращаем пользователя к вопросам опять
