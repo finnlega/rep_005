@@ -78,3 +78,4 @@ let personalMovieDB = {
     }
 };
 
+// функция
