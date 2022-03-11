@@ -56,8 +56,15 @@ let personalMovieDB = {
           
         }
     },
-    toggleVisibleMyDB: function(hidden) {
-        if(hidden) {
+    showMyDB: function(hidden) {
+        if (!hidden) {
+            console.log(personalMovieDB);
+        }
+    
+    },
+    
+    toggleVisibleMyDB: function() {
+        if(personalMovieDB.privat) {
             personalMovieDB.privat = false;
             // console.log(personalMovieDB);
         } else {
@@ -78,65 +85,9 @@ let personalMovieDB = {
             }
                           
         }
-        personalMovieDB.genres.forEach ( function (value, i, genres) {
-            console.log(`Любимый жанр #${i+1} - ${value}`);
+        personalMovieDB.genres.forEach( (value, i) => {
+            console.log(`Любимый жанр ${i+1} - ${value}`);
         });
     }
 };
-personalMovieDB.start();
-personalMovieDB.getLevel();
-personalMovieDB.toggleVisibleMyDB(false);
-personalMovieDB.writeYourGenres();
 
-// function getLevel () {
-//     if (personalMovieDB.count <= 10) {
-//         console.log("Просмотрено довольно мало фильмов");
-//     } else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
-//         console.log("Вы классический зритель");
-//     } else if (personalMovieDB.count > 30) {
-//         console.log("Вы киноман");
-//         }
-//       else {
-//         console.log("Произошла ошибка");  
-      
-//     }
-// } 
-
-// getLevel();
-
-
-
-
-
-function showMyDB(hidden) {
-    if (!hidden) {
-        console.log(personalMovieDB);
-    }
-
-}
-
-showMyDB(false);
-
-// function writeYourGenres() {
-//     for (let j = 0; j < 3; j++ ) {
-//         let genre = prompt(`Ваш любимый жанр под номером ${j+1}`, "");
-//         if (genre == null || genre =="") {
-//             j--;
-//             console.log("ошибка");
-//         }
-//         else {
-//             personalMovieDB.genres[j] = genre;
-//             console.log("выполнено");
-//         }
-          
-        
-//     }
-    
-// }
-
-// writeYourGenres();
-
-
-// genres.forEach(element => {
-//     console.log(`Любимый жанр #${element}` - personalMovieDB.genres[element]);
-// });
