@@ -146,36 +146,74 @@
 
 // 1) Первую часть задания повторить по уроку
 
-// 2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
-// false - выводит в консоль главный объект программы
+// // 2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
+// // false - выводит в консоль главный объект программы
 
-// 3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
-// "Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
-// genres
+// // 3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
+// // "Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+// // genres
 
-// P.S. Функции вызывать не обязательно*/
+// // P.S. Функции вызывать не обязательно*/
 
 
-function binarySearch(value, list) {
-    let first = 0;    //left endpoint
-    let last = list.length - 1;   //right endpoint
-    let position = -1;
-    let found = false;
-    let middle;
+// function binarySearch(value, list) {
+//     let first = 0;    //left endpoint
+//     let last = list.length - 1;   //right endpoint
+//     let position = -1;
+//     let found = false;
+//     let middle;
  
-    while (found === false && first <= last) {
-        middle = Math.floor((first + last)/2);
-        if (list[middle] == value) {
-            found = true;
-            position = middle;
-        } else if (list[middle] > value) {  //if in lower half
-            last = middle - 1;
-        } else {  //in in upper half
-            first = middle + 1;
-        }
-    }
+//     while (found === false && first <= last) {
+//         middle = Math.floor((first + last)/2);
+//         if (list[middle] == value) {
+//             found = true;
+//             position = middle;
+//         } else if (list[middle] > value) {  //if in lower half
+//             last = middle - 1;
+//         } else {  //in in upper half
+//             first = middle + 1;
+//         }
+//     }
     
-    return console.log(position);
-}
+//     return console.log(position);
+// }
 
-binarySearch(8, [1,2,3,4,5,6,7,8,9,10]);
+// binarySearch(8, [1,2,3,4,5,6,7,8,9,10]);
+
+// let x = 5;
+// alert( x++ );
+
+// console.log([] + false - null +true);
+
+// let y = 1; 
+// let x = y = 2;
+// alert(x);
+
+// console.log(typeof([ ] + 1 + 2));
+// alert( typeof("1"[0] ));
+
+console.log(typeof(2 && 1 && null && 0 && undefined));
+// console.log(typeof(!!("4444")));
+
+
+// alert( null || 2 && 3 || 4 ); 
+
+
+// let a = [1, 2, 3]; 
+// let b = [1, 2, 3];
+// if(a == b) {
+//     console.log('done');
+
+// } else {
+//     console.log('error');
+// }
+// false
+
+// alert( typeof(+"Infinity" ));
+// if("Ёжик" > "яблоко") {
+//     console.log("done");
+// } else {
+//     console.log("err");
+// }
+
+// console.log(typeof(0 || "" || 2 || undefined || true || falsе));
