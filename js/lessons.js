@@ -192,7 +192,7 @@
 // console.log(typeof([ ] + 1 + 2));
 // alert( typeof("1"[0] ));
 
-console.log(typeof(2 && 1 && null && 0 && undefined));
+console.log(2 && 1 && null && 0 && undefined);
 // console.log(typeof(!!("4444")));
 
 
